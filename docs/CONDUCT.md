@@ -107,4 +107,4 @@ For answers to common questions about this code of conduct, see the FAQ at [http
 ## Team Acknowledgment and Signatures
 
 Mason DePalma
-![Screenshot of Mason DePalma's Signature](https://drive.google.com/file/d/1690qwZncxK7ckfdT-N8GFlYaHVFPYoK8/view?usp=sharing)
+![Screenshot of Mason DePalma's Signature](https://github.com/RyanJohnson414/IOU/blob/eb96826425a406522600c4094d6c5cfe84c9cdbb/docs/signatures/masondepalma.jpeg)
