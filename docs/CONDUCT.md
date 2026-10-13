@@ -104,6 +104,7 @@ For answers to common questions about this code of conduct, see the FAQ at [http
 [translations]: https://www.contributor-covenant.org/translations
 
 
-Post a link to your survey in the Brightspace Discussions forum for your section (Section 1, 2, 3). You personally must take the surveys of all teams in your section.
+## Team Acknowledgment and Signatures
 
-You must post your survey ASAP because all responses from your audience are due by the due date for this part of the assignment; your team will analyze responses in the next class meeting
+Mason DePalma
+![Screenshot of Mason DePalma's Signature](https://drive.google.com/file/d/1690qwZncxK7ckfdT-N8GFlYaHVFPYoK8/preview)
