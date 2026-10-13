@@ -1,0 +1,1 @@
+[Business Plan on Google Slides](https://docs.google.com/presentation/d/1acMWCdtJ36NwmJ5LyYPGuQ9L_hZm7JgdKl-fvrzSVK0/edit?usp=sharing)
