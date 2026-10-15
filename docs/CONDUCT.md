@@ -114,3 +114,6 @@ Bryan Rich
 
 Ryan Johnson
 ![Screenshot of Ryan Johnson's Signature](https://github.com/RyanJohnson414/IOU/blob/main/docs/signatures/ryanjohnson-signature.png)
+
+Jesse Hopkins
+![Screenshot of Jesse Hopkins's Signature](https://github.com/RyanJohnson414/IOU/blob/main/docs/signatures/signature.jpg)
