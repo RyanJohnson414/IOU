@@ -110,4 +110,4 @@ Mason DePalma
 ![Screenshot of Mason DePalma's Signature](https://github.com/RyanJohnson414/IOU/blob/eb96826425a406522600c4094d6c5cfe84c9cdbb/docs/signatures/masondepalma.jpeg)
 
 Bryan Rich
-![Bryan Rich Signature](signatures/signature.png)]
+![Bryan Rich's Signature](https://github.com/RyanJohnson414/IOU/blob/main/docs/signatures/signature.png)
