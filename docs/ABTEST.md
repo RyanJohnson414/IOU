@@ -86,3 +86,13 @@ The only variable being tested is the wording of the button. Keeping everything 
 **Expected Outcome:**
 
 We predict that Variation B will have a higher click-through rate because the wording more clearly explains the button's purpose. If the difference is meaningful and the experiment has sufficient data, we will consider using the better-performing version in the final application.
+
+
+
+
+## A/B Test: Different Sign up Button Text
+# User Story #1
+# Metric: New Sign ups
+# Hypothesis: We are trying to solve the problem of users downloading the app but never making it by the landing page. We believe that our signup button might be too bland or not enough of a hook that gets users past the first page. 
+# Experiment: Our audience will be 50% of our users to capture a large amount of users who haven't signed up yet. We are using such a large percentage as a good amount of users might never see the change if they are already logged in. We will use firebase remote config and firebase A/B tests to remotely set the text of the button. We will need to track how many new signups come from each variation. 
+# Variations: We will test the following texts for the buttons. "Get Started" (base config), "Sign up", "Start Settling"
