@@ -1,94 +1,83 @@
-## A/B Test: IOU Creation Button Wording
+## A/B Test: Highlighting the Create IOU Navigation Icon
 
-**A/B Test Name:** +IOU vs. +New IOU Button
+**A/B Test Name:** Highlighted vs. Standard Create IOU Icon
 
 **User Story Number:** US4 - Golden Path (#12)
 
-**Metrics:** +IOU Button Click-Through Rate (CTR), Adoption, and IOU Creation Success Rate.
+**Metrics:** Create IOU Icon Click-Through Rate (CTR), Adoption, and IOU Creation Success Rate.
 
 **Hypothesis:**
 
-Changing the navigation bar button text from "+IOU" to "+New IOU" will increase the click-through rate because it more clearly communicates that clicking the button allows users to create a new IOU.
+Adding a circular background behind the Create IOU navigation icon will increase its click-through rate because it will make the icon more noticeable and help users identify it as an important action.
 
 **What problem are we trying to solve? Its impact?**
 
-One of the most important features of our IOU app is allowing users to create and send IOUs to their friends. However, new users may not immediately understand what the "+IOU" button does.
+One of the main features of our IOU app is allowing users to create and send IOUs to friends. Since our app uses an icon-based navigation bar, some users may overlook the icon used to create a new IOU.
 
-If users do not understand how to create an IOU, they may not complete the Golden Path. This could negatively affect user adoption and engagement.
+If users have difficulty finding the option to create an IOU, they may never complete the Golden Path. This could reduce adoption and engagement.
 
-We will use Firebase Analytics to determine how many users see the button compared to how many click it. If the click-through rate is low, this may indicate that the button is unclear or difficult to understand.
+We will first use Firebase Analytics to measure how frequently users see and click the Create IOU icon. A low click-through rate could suggest that the action is not noticeable enough.
 
-Our experiment focuses on changing only the button's text so that we can determine whether clearer wording increases user interaction.
+Our experiment will test whether highlighting the icon improves interaction without changing the navigation layout or functionality.
 
 **Experiment:**
 
-We will conduct an A/B test using Firebase Remote Config and Firebase A/B Testing.
+We will use Firebase Remote Config and Firebase A/B Testing to compare two versions of the navigation icon.
 
-Eligible users will be randomly divided into two groups:
+All authenticated users will be eligible for the experiment and randomly assigned to one of two groups:
 
-- Group A (50%): The navigation button displays "+IOU".
-- Group B (50%): The navigation button displays "+New IOU".
+- **Group A (50%):** The existing Create IOU navigation icon without any additional background.
+- **Group B (50%):** The same navigation icon with a filled circular background to make it stand out.
 
-All other elements of the application will remain identical, including button location, color, functionality, and navigation behavior.
+Both versions will have the same icon, size, location, and functionality. The only difference will be the circular background.
 
-The test will target authenticated users who can access the IOU dashboard. We will aim to run the experiment for at least two weeks to collect enough data to compare the variations.
+We will configure a Firebase Remote Config parameter called `highlight_create_icon` to control which version appears.
 
-We will use Firebase Analytics to track the following custom events:
+We will use Firebase Analytics to record the following custom events:
 
-- `iou_button_impression`: Recorded when the +IOU button is displayed.
-- `iou_button_click`: Recorded when a user clicks the button.
-- `iou_created`: Recorded after an IOU is successfully saved to Firebase Firestore.
+- `iou_button_impression`: Recorded when the navigation icon becomes visible.
+- `iou_button_click`: Recorded when the user clicks the icon.
+- `iou_created`: Recorded when a new IOU is successfully saved to Firebase Firestore.
 
-FlutterFlow's automatically logged `screen_view` and action events will also help us understand navigation behavior.
+FlutterFlow's automatically logged screen views and action events will provide additional information about navigation behavior.
 
-Our primary metric will be CTR, calculated as:
+Our primary metric will be the click-through rate:
 
-CTR = (Button Clicks / Button Impressions) × 100
+**CTR = (Icon Clicks / Icon Impressions) × 100**
 
-We will compare CTR between the two groups and use successful IOU creation events as a secondary metric to determine whether increased clicks lead to more completed actions.
+We will compare CTR between the two groups. We will also track successful IOU creations to determine whether increased clicks lead to more users completing the Golden Path.
+
+The experiment will run for at least two weeks, with the final duration depending on the number of users and events collected. If there is insufficient data, we will consider the result inconclusive.
 
 **Variations:**
 
-**Variation A - Control**
+**Variation A — Control**
 
-The existing navigation bar includes a button labeled "+IOU".
+The current navigation bar uses the existing Create IOU icon without a highlighted background.
 
-```text
-+-----------------------------+
-|         IOU Dashboard       |
-|                             |
-|     What I Owe              |
-|     Owed to Me              |
-|                             |
-| Home     [+IOU]     Friends |
-+-----------------------------+
-```
+Mockup:
 
-**Variation B - Experimental**
+`[ Create IOU: + ]`
 
-The navigation bar is identical, except the button text is changed to "+New IOU".
+No circular background. The icon uses the same styling as the existing navigation controls.
 
-```text
-+-----------------------------+
-|         IOU Dashboard       |
-|                             |
-|     What I Owe              |
-|     Owed to Me              |
-|                             |
-| Home   [+New IOU]   Friends |
-+-----------------------------+
-```
+**Variation B — Experimental**
 
-Both variations will open the exact same IOU creation screen.
+The navigation bar uses the exact same icon, but with a filled circular background behind it.
 
-The only variable being tested is the wording of the button. Keeping everything else identical will help determine whether button wording affects user behavior.
+Mockup:
+
+`[ Create IOU: ⊕ ]`
+
+The circular background adds visual emphasis while keeping the icon itself unchanged.
+
+Both versions will remain in the exact same navigation bar position and open the same IOU creation screen. No text labels will be added.
 
 **Expected Outcome:**
 
-We predict that Variation B will have a higher click-through rate because the wording more clearly explains the button's purpose. If the difference is meaningful and the experiment has sufficient data, we will consider using the better-performing version in the final application.
+We predict that the highlighted version will receive more clicks because it draws attention to one of the application's most important features.
 
-
-
+If the highlighted icon produces a meaningful increase in CTR without reducing successful IOU creation, we will consider adopting that design in the final application.
 
 ## A/B Test: Different Sign up Button Text
 - User Story #1
