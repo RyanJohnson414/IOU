@@ -9,3 +9,5 @@
 - Metric 2: Adoption (New Sign Ups)
   Built into firebase auth directly we can see when users sign up. But we would take it a step further adding a custom firebase analytics trigger for when onboarding is complete. This would allow us to see how many users make it past the first screen and then see how many of those users actually send a IOU slip. 
 
+- Metric 3: Retention (WAU Weekly Active Users)
+  Using Firebase Analytics we will track our weekly active users. We can create a custom firebase triggers whenever a user completes an action related to an IOU either sending it or settling it or anything else associated with one such as viewing their IOUs. This will allow us to track how many unique users return and actively use IOU each week. By comparing WAU over time, we can measure how well we retain users and determine whether users continue finding value in the app after their initial sign-up.
