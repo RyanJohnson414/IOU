@@ -85,3 +85,63 @@ If the highlighted icon produces a meaningful increase in CTR without reducing s
 - Hypothesis: We are trying to solve the problem of users downloading the app but never making it by the landing page. We believe that our signup button might be too bland or not enough of a hook that gets users past the first page. 
 - Experiment: Our audience will be 50% of our users to capture a large amount of users who haven't signed up yet. We are using such a large percentage as a good amount of users might never see the change if they are already logged in. We will use firebase remote config and firebase A/B tests to remotely set the text of the button. We will need to track how many new signups come from each variation. 
 - Variations: We will test the following texts for the buttons. "Get Started" (base config), "Get Started Free", "Join [X]+ Members", "Create My Account in 30 Seconds"
+
+  A/B Test: +IOU vs. +New IOU Button
+
+A/B Test Name: +IOU vs. +New IOU Button
+
+User Story Number: US4 - Golden Path (#12)
+
+Metrics: Create IOU Button Click-Through Rate (CTR), Adoption, and IOU Creation Success Rate.
+
+Hypothesis:
+
+Changing the button text from "+IOU" to "+New IOU" will increase the click-through rate because it makes the purpose of the button easier for users to understand.
+
+What problem are we trying to solve? Its impact?
+
+One of the main features of our IOU app is allowing users to create and send IOUs to friends. New users might not immediately understand what the "+IOU" button does.
+
+If users do not understand how to create an IOU, they might not complete the Golden Path. This could reduce engagement and the number of IOUs created.
+
+We want to see whether changing the button wording makes users more likely to click and create a new IOU.
+
+Experiment:
+
+We will use Firebase Remote Config and Firebase A/B Testing to compare two versions of the Create IOU button.
+
+All authenticated users will be eligible and randomly divided into two groups:
+
+Group A (50%): The button displays "+IOU".
+
+Group B (50%): The button displays "+New IOU".
+
+We will use a Firebase Remote Config parameter named create_iou_button_text to control which version users see.
+
+Firebase Analytics will track three custom events:
+- iou_button_impression: Records when users see the button.
+- iou_button_click: Records when users click the button.
+- iou_created: Records when users successfully create an IOU.
+We will calculate CTR by dividing the number of button clicks by the number of button impressions and multiplying by 100.
+
+We will compare CTR and successful IOU creation between the two groups. The experiment will run for at least two weeks, depending on the number of users and events collected.
+
+Variations:
+
+Variation A - Control
+
+The existing button displays "+IOU".
+
+Mockup: [ +IOU ]
+
+Variation B - Experimental
+
+The button displays "+New IOU".
+
+Mockup: [ +New IOU ]
+
+Both buttons will have the same color, position, and functionality. The only difference will be the wording.
+
+Expected Outcome:
+
+We expect the "+New IOU" button to receive more clicks because users will better understand its purpose. If this version increases CTR and successful IOU creation, we will consider using it in the final app.
