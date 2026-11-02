@@ -11,3 +11,6 @@
 
 - Metric 3: Retention (WAU Weekly Active Users)
   Using Firebase Analytics we will track our weekly active users. We can create a custom firebase triggers whenever a user completes an action related to an IOU either sending it or settling it or anything else associated with one such as viewing their IOUs. This will allow us to track how many unique users return and actively use IOU each week. By comparing WAU over time, we can measure how well we retain users and determine whether users continue finding value in the app after their initial sign-up.
+
+Metric 4: Golden Path CTR (Click-Through Rate)
+We will use Firebase Analytics to track how often users click the "+New IOU" button compared to how often the button appears. We will create custom events for button views and clicks. This will help us see whether users understand how to create a new IOU and which button wording works better.
