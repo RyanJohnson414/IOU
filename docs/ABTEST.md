@@ -86,7 +86,7 @@ If the highlighted icon produces a meaningful increase in CTR without reducing s
 - Experiment: Our audience will be 50% of our users to capture a large amount of users who haven't signed up yet. We are using such a large percentage as a good amount of users might never see the change if they are already logged in. We will use firebase remote config and firebase A/B tests to remotely set the text of the button. We will need to track how many new signups come from each variation. 
 - Variations: We will test the following texts for the buttons. "Get Started" (base config), "Get Started Free", "Join [X]+ Members", "Create My Account in 30 Seconds"
 
-  A/B Test: +IOU vs. +New IOU Button
+## A/B Test: +IOU vs. +New IOU Button
 
 A/B Test Name: +IOU vs. +New IOU Button
 
