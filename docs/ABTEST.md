@@ -140,6 +140,63 @@ The button displays "+New IOU".
 
 Mockup: [ +New IOU ]
 
+**A/B Test: Personalized Welcome Message**
+A/B Test Name: Personalized vs. Standard Welcome Message
+
+User Story Number: US1 - User Sign Up
+
+Metrics: First IOU Creation Rate, User Engagement, and First Session Completion Rate.
+
+Hypothesis
+Displaying a personalized welcome message that includes the user's name will make users feel more welcomed and encourage them to explore the app and create their first IOU.
+
+What problem are we trying to solve? Its impact?
+When users first sign up for our IOU app, they may not immediately understand what to do next or feel motivated to explore its features. A generic welcome message might not create enough excitement or encourage users to begin using the app.
+
+Since creating and sending IOUs is the main purpose of our application, we want to encourage new users to complete their first IOU as soon as possible.
+
+By testing a personalized welcome message, we hope to make the experience feel more welcoming and encourage users to engage with the app.
+
+Experiment
+We will use Firebase Remote Config and Firebase A/B Testing to compare two different welcome messages shown to newly registered users.
+
+Newly registered users will be randomly assigned to one of two groups:
+
+Group A (50%): Displays the standard welcome message.
+Group B (50%): Displays a personalized welcome message that includes the user's name.
+We will configure a Firebase Remote Config parameter called welcome_message to control which message is displayed.
+
+Firebase Analytics will track the following events:
+
+welcome_message_impression: Recorded when the welcome message is displayed.
+first_iou_created: Recorded when a user successfully creates their first IOU.
+welcome_screen_completed: Recorded when a user finishes the welcome screen and continues into the app.
+We will compare first IOU creation rates and engagement between the two groups to determine whether personalization encourages users to begin using the app.
+
+The experiment will run for at least two weeks, with the final duration depending on the number of new users and events collected. If insufficient data is collected, we will consider the results inconclusive.
+
+Variations
+Variation A - Control
+The existing welcome screen displays a standard, non-personalized message.
+
+Mockup:
+
+Welcome to IOU!
+
+Variation B - Experimental
+The welcome screen displays a personalized message using the user's name.
+
+Mockup:
+
+Welcome, [Name]! Ready to keep track of what you owe and what you're owed?
+
+Both versions will use the same screen layout, colors, fonts, and functionality. The only difference will be the welcome message.
+
+Expected Outcome
+We predict that users who receive the personalized welcome message will be more likely to engage with the app and create their first IOU.
+
+If the personalized version produces a meaningful increase in first IOU creation without negatively affecting onboarding completion, we will consider adopting it in the final application.
+
 Both buttons will have the same color, position, and functionality. The only difference will be the wording.
 
 Expected Outcome:
