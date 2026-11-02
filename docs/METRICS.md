@@ -15,5 +15,5 @@
 - Metric 4: Task Success (Click-Through Rate)
 We will use Firebase Analytics to track how often users click the "+New IOU" button compared to how often the button appears. We will create custom events for button views and clicks. This will help us see whether users understand how to create a new IOU and which button wording works better.
 
-- IOU Settlement Rate: Measures the percentage of IOUs that users have marked as settled. Data is collected through Firebase Firestore by tracking each IOU's status. The metric is calculated by dividing the number of settled IOUs by the total number of IOUs created and multiplying by 100. This helps determine whether users are successfully resolving their debts through the app.
+- Metric 5: IOU Settlement Rate: Measures the percentage of IOUs that users have marked as settled. Data is collected through Firebase Firestore by tracking each IOU's status. The metric is calculated by dividing the number of settled IOUs by the total number of IOUs created and multiplying by 100. This helps determine whether users are successfully resolving their debts through the app.
 
